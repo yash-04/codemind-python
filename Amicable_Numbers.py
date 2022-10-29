@@ -1,14 +1,12 @@
-
+def pfs(num):
+    fs=0
+    for i in range(1,num):
+        if num%i==0:
+            fs+=i
+    return fs
 a=int(input())
 b=int(input())
-p_a=p_b=0
-for i in range(1,a):
-    if a%i==0:
-        p_a+=i
-for i in range(1,b):
-    if b%i==0:
-        p_b+=i
-if(p_a==b and p_b==a):
+if(pfs(b)==a and pfs(a)==b):
     print('Amicable')
 else:
-    print("Not Amicable")
+    print('Not Amicable')
