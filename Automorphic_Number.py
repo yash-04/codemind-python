@@ -1,17 +1,7 @@
 n=int(input())
-c=str(n)
-m=n*n
-i=10
-a=len(c)
-while a>0:
-    r=m%i
-    if r==n:
-        print('Automorphic Number')
-        break
-    else:
-        i*=10
-        a-=1
-if(a==0):
-      print('Not an Automorphic Number')
-        
-    
+m=pow(n,2)
+mod=pow(10,len(str(n)))
+if m%mod==n:
+    print('Automorphic Number')
+else:
+    print("Not an Automorphic Number")
